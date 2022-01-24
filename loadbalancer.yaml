@@ -18,6 +18,8 @@ services:
     hostname: apache2
     ports:
      - 8082:80
+    networks:
+     - mynet 
   lb:
     image: lb:v1
     build:
@@ -26,10 +28,8 @@ services:
     depends_on:
       - tomcat
       - apache2
-    volumes:
-      - <path to haprox_backup.cfg>:/usr/local/etc/haproxy/haproxy.cfg
     ports:
-      - 8080:8080
+      - 8080:80
     networks:
       - mynet
 networks:
