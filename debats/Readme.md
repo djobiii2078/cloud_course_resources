@@ -1,0 +1,25 @@
+# Débats
+Les débats sont une séance de 40 minutes qui opposent deux groupes de deux étudiant.e.s.
+Les débats consistent à argumenter sur un sujet particulier où il faut prendre position par rapport à une question relative au Cloud (techno, architecture, design, etc.).
+Les étudiant.e.s sont prévenus une semaine à l'avance d'un débat et les participants sont tirés au sort. 
+Cela permet de travail l'esprit d'équipe et la mécanique pour persuader une audience ou des collègues par rapport à un choix technique qui concerne l'entreprise.
+
+## Déroulement
+
+Le débat débute par une présentation de 10 minutes par chaque groupe.
+Ensuite un échange entre les deux groupes de 10 minutes.
+A la fin de cet échange, l'audience a 10 minutes pour poser des questions concernant l'échange.
+
+## Notation 
+
+On note principalement la `qualité de la présentation`, la `réactivité durant le débat` et `l'aisance durant l'échange avec l'audience`.
+
+## Programmation 
+|    Date    	| Group 1 	| Group 2 	| Debate topic                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	|
+|:----------:	|:-------:	|---------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| 29/03/2022 	|   xxx   	| xxx     	| Une ESN spécialisé dans la création des sites web pour particuliers aimerait exploiter le Cloud afin de réduire les coûts. Malheureusement, elle peine à se décider concernant le type de Cloud à adopter (Cloud privé ou Cloud public).  Pour ne rien arranger, les ingénieurs tergiversent pour savoir s'il faut utiliser des VMs ou des containers. Un groupe se mettra dans la peau du défenseur du Cloud public + conteneurs et l'autre groupe défendra le Cloud privé + VMs.  	|
+|            	|         	|         	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	|
+|            	|         	|         	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	|
+|            	|         	|         	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	|
+|            	|         	|         	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	|
+|            	|         	|         	|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     	|
