@@ -6,9 +6,9 @@ Cela permet de travail `l'esprit d'équipe` et la `mécanique pour persuader une
 
 ## Déroulement
 
-Le débat débute par une présentation de **10 minutes** par chaque groupe.
-Ensuite un échange entre les deux groupes de **10 minutes**.
-A la fin de cet échange, l'audience a **10 minutes** pour poser des questions concernant l'échange.
+Le débat débute par une présentation de `10 minutes` par chaque groupe.
+Ensuite un échange entre les deux groupes de `10 minutes`.
+A la fin de cet échange, l'audience a `10 minutes` pour poser des questions concernant l'échange.
 
 ## Notation 
 
