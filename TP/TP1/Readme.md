@@ -11,7 +11,7 @@ VM. Then we will collect metrics such as boot time, performance, and latency, an
 
 There are basically two ways of installing Xen on a Linux kernel operating system. 
 The first is to manually build it from sources and the second is to install pre-built binaries. 
-We will try both. 
+We will try both. Useful resources to look can be find here : https://wiki.xenproject.org/wiki/Xen_Project_Beginners_Guide
 
 Before launching, get the list of supported operating systems and kernels in the grub : `ls /boot`
 ### Manual install 
@@ -36,7 +36,9 @@ libaio-dev markdown pandoc libc6-dev-i386`
 
 `sudo apt build-dep xen`
 
+
 5. Now enter the Xen folder and run `./configure`. This will configure headers and installation scripts based on your system.
+
 6. Build Xen by running : 
 
 `sudo make -j$(nproc)` *What is the meaning of $(nproc)*
@@ -50,5 +52,7 @@ libaio-dev markdown pandoc libc6-dev-i386`
 
 ## Too hard ? Check the prebuilt version 
 
+1. Install Xen from the prebuilt store `sudo apt-get install xen-hypervisor-amd64`
+2. Open the file XEN_OVERRIDE_GRUB_DEFAULT=1
 
 
