@@ -122,5 +122,7 @@ iface br0 inet dhcp
   bridge_fd 0   
 ``` 
 
+3. Lancer `/etc/init.d/networking restart` et vérifier si le bridge est crée
+
 
 
