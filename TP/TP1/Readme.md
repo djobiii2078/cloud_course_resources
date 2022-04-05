@@ -68,14 +68,21 @@ libaio-dev markdown pandoc libc6-dev-i386`
 2. Créons le fichier de configuration pour notre futur VM. Par la suite, je suppose que le fichier s'appelle `vm1.cfg` : 
 
 ` /etc/xen/vm.cfg
+
 bootloader = 'pygrub'
+
 vcpus = 2
+
 memory = 1024
+
 root = '/dev/xvda1 ro'
+
 disk = [
  '/home/ubuntu/images/vm.qcow2,qcow2,hda,rw'
  ]
+
 name = 'myvm'
+
 vif = [ 'bridge=br0' ] `
 
 Changer le chemin de l'image pour correspondre à vos répertoires. 
@@ -83,11 +90,16 @@ Changer le chemin de l'image pour correspondre à vos répertoires.
 3. Modifions le mot de passe de l'image pour pouvoir y accéder : 
 
 `modprobe nbd max_part=8
+
 qemu-nbd --connect=/dev/nbd0 /home/vms/images/vm.qcow2
+
 fdisk /dev/nbd0 -l
+
 mount /dev/nbd0p1 /mnt/
- chroot /mnt/
- passwd`
+
+chroot /mnt/
+
+passwd`
 
 3. Que pouvez vous dire du fichier de configuration ? Que nous-manque t'il ? 
 
