@@ -53,6 +53,42 @@ libaio-dev markdown pandoc libc6-dev-i386`
 ## Too hard ? Check the prebuilt version 
 
 1. Install Xen from the prebuilt store `sudo apt-get install xen-hypervisor-amd64`
-2. Open the file XEN_OVERRIDE_GRUB_DEFAULT=1
+2. Open the file `/etc/default/grub.d` et corriger `XEN_OVERRIDE_GRUB_DEFAULT` avec la valeur `1`
+3. Mettez à jour la liste des systèmes et redemarrer `sudo update-grub && reboot`.
+
+## Démarrer le service Xen 
+
+1. Lancer le service Xen avec la commande `sudo /etc/init.d/xencommons start` 
+2. Vérifier que le service est correctement lancé : `sudo xl list`. Que fait cette commande ? 
+3. Quelle quantité de ressources est alloué au `dom0` ? 
+
+## Démarrer une VM paravirtualisé
+
+1. Téléchargeons l'image d'un système d'exploitation (Ubuntu) : `wget http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-servercloudimg-amd64.img -P /home/ubuntu/images/ -O vm.qcow2`
+2. Créons le fichier de configuration pour notre futur VM. Par la suite, je suppose que le fichier s'appelle `vm1.cfg` : 
+
+` /etc/xen/vm.cfg
+bootloader = 'pygrub'
+vcpus = 2
+memory = 1024
+root = '/dev/xvda1 ro'
+disk = [
+ '/home/ubuntu/images/vm.qcow2,qcow2,hda,rw'
+ ]
+name = 'myvm'
+vif = [ 'bridge=br0' ] `
+
+Changer le chemin de l'image pour correspondre à vos répertoires. 
+
+3. Modifions le mot de passe de l'image pour pouvoir y accéder : 
+
+`modprobe nbd max_part=8
+qemu-nbd --connect=/dev/nbd0 /home/vms/images/vm.qcow2
+fdisk /dev/nbd0 -l
+mount /dev/nbd0p1 /mnt/
+ chroot /mnt/
+ passwd`
+
+3. Que pouvez vous dire du fichier de configuration ? Que nous-manque t'il ? 
 
 
