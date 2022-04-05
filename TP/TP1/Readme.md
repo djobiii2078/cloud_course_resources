@@ -108,5 +108,19 @@ Modifier le mot de passe pour mettre celui de votre choix et enregistrer cela
 
 7. Pouvez-vous rajouter des coeurs à la VM en cours d'exécution ? Et la mémoire ? 
 
+## Création du bridge 
+
+1. Ouvrir le fichier `/etc/network/interfaces`
+2. Rajoutons ceci 
+
+```
+auto br0
+iface br0 inet dhcp 
+  bridge_ports eth0 
+  bridge_stp off       # disable Spanning Tree Protocol
+  bridge_waitport 0    # no delay before a port becomes available
+  bridge_fd 0   
+``` 
+
 
 
