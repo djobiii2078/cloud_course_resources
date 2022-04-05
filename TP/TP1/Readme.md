@@ -64,43 +64,44 @@ libaio-dev markdown pandoc libc6-dev-i386`
 
 ## Démarrer une VM paravirtualisé
 
-1. Téléchargeons l'image d'un système d'exploitation (Ubuntu) : `wget http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-servercloudimg-amd64.img -P /home/ubuntu/images/ -O vm.qcow2`
+1. Téléchargeons l'image d'un système d'exploitation (Ubuntu) : `wget http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img -P /home/ubuntu/images/ -O vm.qcow2`
 2. Créons le fichier de configuration pour notre futur VM. Par la suite, je suppose que le fichier s'appelle `vm1.cfg` : 
 
-`/etc/xen/vm.cfg
-
-bootloader = 'pygrub'
-
-vcpus = 2
-
-memory = 1024
-
-root = '/dev/xvda1 ro'
-
-disk = [
- '/home/ubuntu/images/vm.qcow2,qcow2,hda,rw'
+ /etc/xen/vm.cfg
+ bootloader = 'pygrub'
+ vcpus = 2
+ memory = 1024
+ root = '/dev/xvda1 ro'
+ disk = [
+  '/home/ubuntu/images/vm.qcow2,qcow2,hda,rw'
  ]
-
-name = 'myvm'
-
-vif = [ 'bridge=br0' ] `
+ name = 'myvm'
+ vif = [ 'bridge=br0' ] 
 
 Changer le chemin de l'image pour correspondre à vos répertoires. 
 
 3. Modifions le mot de passe de l'image pour pouvoir y accéder : 
 
-`modprobe nbd max_part=8
+ modprobe nbd max_part=8
+ qemu-nbd --connect=/dev/nbd0 /home/vms/images/vm.qcow2
+ fdisk /dev/nbd0 -l
+ mount /dev/nbd0p1 /mnt/
+ chroot /mnt/
+ passwd
+ 
+Modifier le mot de passe pour mettre celui de votre choix et enregistrer cela 
 
-qemu-nbd --connect=/dev/nbd0 /home/vms/images/vm.qcow2
+ umount /mnt/
+ qemu-nbd --disconnect /dev/nbd0
+ rmmod nbd
 
-fdisk /dev/nbd0 -l
+4. Que pouvez vous dire du fichier de configuration ? Que nous-manque t'il ? 
 
-mount /dev/nbd0p1 /mnt/
+5. Démarrons la VM : `sudo xl create -c /chemin/vers/vm1.cfg` 
 
-chroot /mnt/
+6. Que vous donne la commande : `sudo xl list`
 
-passwd`
+7. Pouvez-vous rajouter des coeurs à la VM en cours d'exécution ? Et la mémoire ? 
 
-3. Que pouvez vous dire du fichier de configuration ? Que nous-manque t'il ? 
 
 
