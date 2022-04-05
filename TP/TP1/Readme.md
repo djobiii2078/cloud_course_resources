@@ -67,7 +67,7 @@ libaio-dev markdown pandoc libc6-dev-i386`
 1. Téléchargeons l'image d'un système d'exploitation (Ubuntu) : `wget http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-servercloudimg-amd64.img -P /home/ubuntu/images/ -O vm.qcow2`
 2. Créons le fichier de configuration pour notre futur VM. Par la suite, je suppose que le fichier s'appelle `vm1.cfg` : 
 
-` /etc/xen/vm.cfg
+`/etc/xen/vm.cfg
 
 bootloader = 'pygrub'
 
