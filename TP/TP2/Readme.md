@@ -30,7 +30,7 @@ sudo tar xfv linux-4.4.262.tar.xz
 - At this step, you need to define the modules you want for your linux kernel (you can
 do that by entering in the linux kernel folder and typing make menuconfig), but we will
 just copy the existing config on your machine
-```cd linux-4.4.262.tar.xz && cp /boot/config-$(uname -r) .config```
+```cd linux-4.4.262 && cp /boot/config-$(uname -r) .config```
 
 - Load the copied menuconfig. Do that by launching `make menuconfig` and loading `.config` file.
 
