@@ -32,6 +32,8 @@ do that by entering in the linux kernel folder and typing make menuconfig), but 
 just copy the existing config on your machine
 ```cd linux-4.4.262.tar.xz && cp /boot/config-$(uname -r) .config```
 
+- Load the copied menuconfig. Do that by launching `make menuconfig` and loading `.config` file.
+
 - Build the kernel based on the existing config file you just copied.
 
 ```
