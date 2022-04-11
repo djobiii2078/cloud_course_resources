@@ -81,17 +81,20 @@ curl -X GET 127.0.0.1:300
 
 ## Les informations de votre container 
 
-Pour obtenir toutes les informations sur les images en cours d'exécutio, on utilise la commande `docker ls --all` ou `docker images`.
+Pour obtenir toutes les informations sur les images en cours d'exécutio, on utilise la commande `docker images`.
 
 - Quelle est la taille de votre container ? 
 - En changeant l'entête du `Dockerfile` à `FROM node:12-alpine`, quelle est la nouvelle taille ?
+- Créer un serveur web avec le language de votre choix, définissez le `Dockerfile`, et tester le.
 
 
 ## Evaluer la dégradation 
 
-Mesurer la latence des requêtes `http` de votre serveur containerisé et en natif
+Mesurer la latence des requêtes `http` de votre serveur containerisé et en natif. 
+Concrètement, obtenez la `moyenne, et {95, 99} ème percentile` sur une moyenne de 1000 requêtes.
 
-## Votre container, vos métriques.
+`Tracer un graphe et commenter vos résultats`
+
 
 
 
