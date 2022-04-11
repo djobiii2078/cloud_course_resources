@@ -37,9 +37,12 @@ Créeons un Dockerfile avec le contenu suivant :
 
 ```
 FROM ubuntu
-RUN apt-get update && apt install nodejs npm
+ARG DEBIAN_FRONTEND=nninteractive
+ENV TZ=Europe/Paris
+RUN apt-get update && apt install -ynodejs npm
 WORKDIR .
 COPY  package.json /
+COPY app.js /
 RUN npm install .
 CMD [ "node", "app.js" ]
 
@@ -67,7 +70,7 @@ Construisons le container :
 ```
 docker build –t myappcontainer .
 docker images 
-docker run –d 3000:3000 myappcontainer
+docker run –d -p 3000:3000 myappcontainer
 ```
 
 Tester le container : 
