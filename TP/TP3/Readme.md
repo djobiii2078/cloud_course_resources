@@ -12,7 +12,7 @@ sudo apt-get remove docker npm nodejs docker-engine docker.io containerd runc
 
 sudo apt-get install npm nodejs ca-certificates curl gnupg lsb-release
 
-curl –fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor –o /usr/share/keyrings/docker-archive-keyring.gpg 
+curl --fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg 
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu  \
@@ -75,6 +75,10 @@ Tester le container :
 ```
 curl -X GET 127.0.0.1:300
 ```
+
+## Les informations de votre container 
+
+Pour obtenir toutes les informations sur les images en cours d'exécution
 
 ## Evaluer la dégradation 
 
