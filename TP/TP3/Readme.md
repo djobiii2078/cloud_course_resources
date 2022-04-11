@@ -39,7 +39,7 @@ Créeons un Dockerfile avec le contenu suivant :
 FROM ubuntu
 ARG DEBIAN_FRONTEND=nninteractive
 ENV TZ=Europe/Paris
-RUN apt-get update && apt install -ynodejs npm
+RUN apt-get update && apt install -y nodejs npm
 WORKDIR .
 COPY  package.json /
 COPY app.js /
