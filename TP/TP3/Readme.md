@@ -78,7 +78,11 @@ curl -X GET 127.0.0.1:300
 
 ## Les informations de votre container 
 
-Pour obtenir toutes les informations sur les images en cours d'exécution
+Pour obtenir toutes les informations sur les images en cours d'exécutio, on utilise la commande `docker ls --all` ou `docker images`.
+
+- Quelle est la taille de votre container ? 
+- En changeant l'entête du `Dockerfile` à `FROM node:12-alpine`, quelle est la nouvelle taille ?
+
 
 ## Evaluer la dégradation 
 
