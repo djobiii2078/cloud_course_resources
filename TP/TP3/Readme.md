@@ -68,9 +68,9 @@ app.listen(port, () => {
 Construisons le container : 
 
 ```
-docker build –t myappcontainer .
+docker build -t myappcontainer .
 docker images 
-docker run –d -p 3000:3000 myappcontainer
+docker run -d -p 3000:3000 myappcontainer
 ```
 
 Tester le container : 
