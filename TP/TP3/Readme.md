@@ -10,7 +10,7 @@ Pour installer le Docker runtime, nous allons utiliser les mêmes instructions q
 ```
 sudo apt-get remove docker npm nodejs docker-engine docker.io containerd runc
 
-sudo apt-get install ca-certificates curl gnupg lsb-release
+sudo apt-get install npm nodejs ca-certificates curl gnupg lsb-release
 
 curl –fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor –o /usr/share/keyrings/docker-archive-keyring.gpg 
 
