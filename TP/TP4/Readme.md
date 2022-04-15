@@ -29,7 +29,7 @@ Pour accéder à la console des containers, faîtes `docker attach <containerId>
 
 Nous allons maintenant créer un réseau personnalisé `mynet`. 
 
-- Créons le réseau `mybridge` de type `bridge` : `docker network create --driver bridge mynet`
+- Créons le réseau `mynet` de type `bridge` : `docker network create --driver bridge mynet`
 - Démarrons à nouveau deux containers `c1` et `c2` en associant notre réseau `mynet` et un troisième container `c3` : 
 
 ```
