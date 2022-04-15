@@ -78,8 +78,8 @@ sleep infinity
 ```
 docker build -t apache2:v1 .
 docker build -t tomcat:v1 . 
-docker run –dit --name ws2 –p 8081:8080 apache2:v1
-docker run –dit --name ws1 –p 8082:80 tomcat:v1
+docker run –dit --name ws2 –p 8081:80 apache2:v1
+docker run –dit --name ws1 –p 8082:8080 tomcat:v1
 ```
 
 - Maintenant, nous allons créer le load balancer. Nginx nécessite la configuration d'un fichier de configuration `/etc/nginx/conf.d/default.conf`. 
