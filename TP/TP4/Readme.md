@@ -106,7 +106,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 docker build –t lb:v1 .
 docker run –dit --name lb –p 8083:80 lb:v1
 ```
-- Test votre loadbalancer en rafraichissant la page `localhost:8083`
+- Test votre loadbalancer en rafraichissant la page `localhost:8083`. Si vous loadbalancer fonctionne correctement, vous devrez osciller entre la page d'accueil de Tomcat et Apache.
 
 
 ## Réalisez le votre et soyez portable.
@@ -118,5 +118,5 @@ Rajouter un serveur applicatif à votre load balancer et faites les changemnents
 Transférrer votre nouveau load balancer à deux voisins proches pour qu'il puisse lle déployer sans votre aide de A-Z. 
 Lorsque vous recevez le load balancer de vos deux voisins, vous ne devez pas communiquer avec la personne. 
 
-`Dans un rapport, noter les difficultés que vous avez eu, le temps de déploiement, et si vous avez réussi à faire fonctionner.`
+`Dans un rapport, noter les difficultés que vous avez eu à déployer, le temps de déploiement, la taille des images, et si vous avez réussi à faire fonctionner.`
 
