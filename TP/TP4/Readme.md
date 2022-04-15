@@ -73,6 +73,8 @@ Le fichier `launch-tomcat.sh` est le script qui déclence l'exécution de Tomcat
 sleep infinity
 ```
 
+Donner tout les droits à ce fichier : `chmod 777 launch-tomcat.sh`
+
 - Construire l'image des deux serveurs webs et démarrer les (associer le port 8081 à Apache et 8082 à Tomcat)
 
 ```
