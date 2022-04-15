@@ -21,6 +21,8 @@ Pour un container en cours d'exécution, vous pouvez obtenir l'adresse de son in
 
 `docker run -dit --name c2 myappcontainer ash`
 
+Pour accéder à la console des containers, faîtes `docker attach <containerId>` où *containerId* est l'identifiant du container.
+
 - Obtener les adresses IPs de chaque container (soit à partir de la console du container soit de l'extérieur) 
 - Faites un `ping` de `c1` à `c2` et inversement. Que constatez-vous ? Noter la latence.
 - Essayez de faire `ping c1` et `ping c2` dans c2 et c1 respectivement. Que constatez-vous ? 
