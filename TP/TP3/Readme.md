@@ -30,7 +30,7 @@ Pour démarrer, un container a besoin d'un fichier de spécification `Dockerfile
 Créeons un projet `myapp`: 
 
 ```
-mkdir myapp && npm init . && npm install --save express
+mkdir myapp && npm init  && npm install --save express
 ```
 
 Créeons un Dockerfile avec le contenu suivant : 
