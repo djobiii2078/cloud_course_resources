@@ -4,7 +4,7 @@ Le but de ce TP est d'explorer les modes d'accès réseau des containers, mettre
 ## Mode d'accès réseau des containers 
 
 Comme expliqué en cours, les containers supportent plusieurs modes d'accès réseau, `Bridge`, `Host`, `none`, mais aussi `macvlan`, `ipvlan`, et `overlay`. 
-En vous appuyant sur votre compréhension des systèmes existants et de la [https://docs.docker.com/network/](documentation officiel), dresser un tableau où vous donner
+En vous appuyant sur votre compréhension des systèmes existants et de la ![documentation officiel](https://docs.docker.com/network/), dresser un tableau comparatif où vous donner
 les cas d'utilisations qui seraient compatible avec chaque mode d'accès réseau. 
 
 ## Choisir son mode d'accès réseau
@@ -15,9 +15,10 @@ Pour voir les différents réseaux existants : `docker network ls`.
 
 Pour un container en cours d'exécution, vous pouvez obtenir l'adresse de son interface avec `docker network inspect bridge` (bridge peut être remplacé par le nom de votre réseau personalisé)
 
-- Créer deux containers (node12-alpine). Le premier container doit s'appeler `c1` et le deuxième `c2`. Démarrez ces containers en mode interactif avec une console attaché dessus: 
+- Créer deux containers (node:12-alpine). Le premier container doit s'appeler `c1` et le deuxième `c2`. Démarrez ces containers en mode interactif avec une console attaché dessus: [Par la suite, je considère l'image `myappcontainer` comme étant celui avec une base node:12-alpine]
 
 `docker run -dit --name c1 myappcontainer ash`
+
 `docker run -dit --name c2 myappcontainer ash`
 
 - Obtener les adresses IPs de chaque container (soit à partir de la console du container soit de l'extérieur) 
@@ -111,6 +112,9 @@ docker run –dit --name lb –p 8083:80 lb:v1
 ## Réalisez le votre et soyez portable.
 
 Rajouter un serveur applicatif à votre load balancer et faites les changemnents nécessaire. 
+
+![Load balancer à implementer](./yourserver.PNG)
+
 Transférrer votre nouveau load balancer à deux voisins proches pour qu'il puisse lle déployer sans votre aide de A-Z. 
 Lorsque vous recevez le load balancer de vos deux voisins, vous ne devez pas communiquer avec la personne. 
 
