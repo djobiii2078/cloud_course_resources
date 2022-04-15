@@ -42,7 +42,7 @@ Un load balancer (équilibreur de charge) permet de répartir les requêtes entr
 C'est essentiel pour abstraire les noeuds de traitement aux utilisateurs, permettant ainsi de gérer de façon transparent des opérations de maintenance sur un serveur ou le passage à l'échelle. 
 Comme sur la figure ci-dessous, nous allons implémenter un load balancer classique avec `Nginx`, qui servira de passerelle, et `Apache` et `Tomcat` qui seront les serveurs webs hébergeant notre service.
 
-![Load balancer à implementer](./image.png)
+![Load balancer à implementer](./loadbalancer.PNG)
 
 - Créer l'image pour le service Apache : 
 
