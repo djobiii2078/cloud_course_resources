@@ -71,7 +71,7 @@ Rajoutons plusieurs instances du container `lb` :
 
 ### Rajout d'un injecteur de charge 
 
-![Injecteur de charges](TP/TP5/injector.png)
+![Injecteur de charges](injector.PNG)
 
 
 Ecrire le code d'un composant qui fera des requêtes à notre loadbalancer et renverras un rapport sur la latence des requêtes. 
