@@ -10,7 +10,7 @@ Il permet aussi de déclencher le démarrer de plusieurs containers d'une même 
 
 ## Configuration d'un loadbalancer avec docker-compose
 
-Créeons le fichier de configuration qui définira notre loadbalancer (composé d'apache, tomcat, nginx)
+Créeons le fichier de configuration `docker-compose.yaml`qui définira notre loadbalancer (composé d'apache, tomcat, nginx)
 
 ```
 version: '1'
@@ -71,7 +71,7 @@ Rajoutons plusieurs instances du container `lb` :
 
 ### Rajout d'un injecteur de charge 
 
-![Injecteur de charges](/injector.png)
+![Injecteur de charges](./injector.png)
 
 
 Ecrire le code d'un composant qui fera des requêtes à notre loadbalancer et renverras un rapport sur la latence des requêtes. 
