@@ -115,7 +115,7 @@ setInterval(issueReq,5000)
 
 ```
 
-
+Vous pouvez voir les logs de facon progressive d'un service (exemple: injecteur) avec la commande `docker-compose logs -f -t injecteur`
 
 - Créer un dossier et à l'intérieur définisser le dockerfile pour votre injecteur. 
 
