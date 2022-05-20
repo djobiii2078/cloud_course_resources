@@ -15,5 +15,5 @@ Les livrables doivent contenir, les codes sources du projet, script de déploiem
 
 # Schéma du projet annoté
 
-![Projet annoté](/projet/proj_snr.png)
+![Projet annoté](/proj_snr.png)
 
