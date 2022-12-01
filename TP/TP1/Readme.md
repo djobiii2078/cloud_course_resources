@@ -75,6 +75,7 @@ libaio-dev markdown pandoc libc6-dev-i386`
   '/home/ubuntu/images/vm.qcow2,qcow2,hda,rw'
  ]
  name = 'myvm'
+ type = 'pvh'
  vif = [ 'bridge=br0' ] 
  ```
 
