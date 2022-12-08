@@ -136,9 +136,5 @@ sudo mount -t nfs <IP address of initial>:/home/user/vms /home/user/vms
 Remember to repeat each operation 5 times to get the average, 95th, and 95th percentiles.
 ```
 
-### Impact on VM applications.
-
-The goal is to vary the dom0 resources and evaluate the impact on the VM application. 
-
 
 
