@@ -1,4 +1,4 @@
-# TP1: Rappel + Mise en bouche pour Kubernetes
+# TP6: Mise en bouche pour Kubernetes
 
 Ce TP a pour objectif de rappeler les concepts de base des containers et faire une mise en bouche pour Kubernetes.
 Concrètement, vous allez être amener à implementer certaines fonctionnalités de Kubernetes pour saisir la complexité de le l'outil.
