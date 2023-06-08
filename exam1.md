@@ -2,7 +2,7 @@
 
 ## Règles + déroulement
 
-L'examen a une durée de 3h de temps où on attends de vous 30mn sur une partie théorique et 2h30 sur une partie pratique.
+L'examen a une durée de 3h de temps où on attends de vous 20mn sur une partie théorique et 2h40 sur une partie pratique.
 
 L'examen théorique comporte 20 questions à réponse dans un temps de 30mns. 
 Pour les QCMs, une mauvaise réponse retire `-0.5pt` et une réponse vide `0pt`.
