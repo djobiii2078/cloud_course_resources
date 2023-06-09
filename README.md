@@ -14,6 +14,7 @@ Vous y écrirez ce que vous comprenez des exercices, les différents problèmes 
 Le contrôle final portera sur des notions vues en cours, ainsi que sur celles vues en TP à travers les questions théoriques.
 
 **Projet: 09 Juin 2023 à 23h59**
+
 **Exam: 08 - 09 Juin 2023 : 9h-12h**
 
 ## Organisation du cours
