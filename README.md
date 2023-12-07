@@ -14,6 +14,7 @@ Vous y écrirez ce que vous comprenez des exercices, les différents problèmes 
 Le contrôle final portera sur des notions vues en cours, ainsi que sur celles vues en TP à travers les questions théoriques.
 
 **Projet: 14 Février 2024 à 23h59**
+
 **CC (QCM d'environ 60 questions - 1h15): 31 Janvier 2024 --- 13h15-16h15**
 
 
