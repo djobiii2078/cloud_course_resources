@@ -15,7 +15,7 @@ Le contrôle final portera sur des notions vues en cours, ainsi que sur celles v
 
 **Projet: 14 Février 2024 à 23h59**
 
-**CC (QCM d'environ 60 questions - 1h15): 31 Janvier 2024 --- 13h15-16h15**
+**CC (QCM d'environ 60 questions - 1h15): 31 Janvier 2024 --- 13h15-16h15: [http://form-timer.com/start/5eee2bc9](http://form-timer.com/start/5eee2bc9)**
 
 
 ## Organisation du cours
