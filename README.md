@@ -15,8 +15,7 @@ Le contrôle final portera sur des notions vues en cours, ainsi que sur celles v
 
 **Projet: 28 Juin 2024 à 23h59**
 
-**CC (QCM 45 questions - 45mns): 31 Mai 2024 --- 8h00-12h00: [Le lien de l'examen](https://test.gclocked.com/?form=-NzB1WPV7_OLhbRvqr8t)**
-
+**Mockup exam: [Link](https://test.gclocked.com/?form=-NpUJAYpJJeRdOrBKilE)**
 
 ## Organisation du cours
 
