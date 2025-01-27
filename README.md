@@ -13,7 +13,7 @@ Vous y écrirez ce que vous comprenez des exercices, les différents problèmes 
 
 Le contrôle final portera sur des notions vues en cours, ainsi que sur celles vues en TP à travers les questions théoriques.
 
-**Projet: 28 Juin 2024 à 23h59**
+**Projet: 14 Février 2025 à 23h59**
 
 **Mockup exam: [Link](https://test.gclocked.com/?form=-NpUJAYpJJeRdOrBKilE)**
 
