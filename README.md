@@ -15,7 +15,7 @@ Le contrôle final portera sur des notions vues en cours, ainsi que sur celles v
 
 **Projet: 14 Février 2025 à 23h59**
 
-**Mockup exam: [Link](https://test.gclocked.com/?form=-NpUJAYpJJeRdOrBKilE)**
+**Exam: [Link](https://test.gclocked.com/?form=-NpUJAYpJJeRdOrBKilE)**
 
 ## Organisation du cours
 
