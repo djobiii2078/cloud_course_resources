@@ -2,7 +2,7 @@
 
 ## Responsable de module
 
-- Djob Mvondo (barbe-thystere.mvondodjob@univ-rennes1.fr)
+- [Djob Mvondo](https://djobiii2078.github.io) (barbe-thystere.mvondodjob@univ-rennes1.fr) 
 
 ## La procédure d'évaluation
 
@@ -12,10 +12,6 @@ Ces rapports doivent fidèlement rendre compte de votre travail.
 Vous y écrirez ce que vous comprenez des exercices, les différents problèmes que vous rencontrez et comment vous réussissez à les résoudre, ainsi que les réponses au questions théoriques présentes dans les sujets de TP. Les TPs peuvent être réaliser en binôme ou seul (un TP fait en binôme implique que les rendus sont commun).
 
 Le contrôle final portera sur des notions vues en cours, ainsi que sur celles vues en TP à travers les questions théoriques.
-
-**Projet: 14 Février 2025 à 23h59**
-
-**Exam: [Link](https://test.gclocked.com/?form=-NpUJAYpJJeRdOrBKilE)**
 
 ## Organisation du cours
 
