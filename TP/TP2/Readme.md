@@ -1,70 +1,11 @@
 # TP2 
 
-The goal of this practical course is to gather several metrics regarding VMs (to later compare them with other isolation units).
+The goal of this practical course is to perform live migration of a VM and analyse the impact of configuration on administrative tasks.
 
 ## Prerequisites
 
 First, you should install Xen as in the [TP1](https://github.com/djobiii2078/cloud_course_resources/tree/main/TP/TP1). 
 
-## Build a custom dom0 kernel 
-
-Now, we will configure a custom dom0 kernel and check if the dom0 kernel can have an impact on the performance of your VMs. 
-
-### Build a custom kernel 
-
-Let’s build our custom kernel. The following steps assumes that you’re running either Ubuntu or Debian.
-- Firstly, download a Linux kernel archive (hereafter, I choose Linux 4.4.262).
-```
-wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.262.tar.xz
-```
-- Before building, let’s install the necessary dependencies (you may need additional dependencies)
-```
-sudo apt-get install git fakeroot build-essential ncurses-dev
-xz-utils libssl-dev bc flex libelf-dev bison
-```
-- Unzip the archive
-```
-sudo tar xfv linux-4.4.262.tar.xz
-```
-
-- At this step, you need to define the modules you want for your linux kernel (you can
-do that by entering in the linux kernel folder and typing make menuconfig), but we will
-just copy the existing config on your machine
-```cd linux-4.4.262 && cp /boot/config-$(uname -r) .config```
-
-- Load the copied menuconfig. Do that by launching `make menuconfig` and loading `.config` file.
-
-- Build the kernel based on the existing config file you just copied.
-
-```
-make 
-``` 
-
-(If you're confident, you can parallelize the compilation)
-
-- If successful, build the necessary kernel modules : 
-
-```
-sudo make modules_install 
-```
-
-- Finally, install the binaries at the corresponding locations : 
-
-```
-sudo make install 
-```
-
-- Update your GRUB to refresh the list of available kernels : 
-
-```
-sudo update-grub 
-```
-
-- Reboot and select your custom kernel with Xen and check if Xen services launch correctly upon boot.  
-
-## dom0 kernel impact 
-
-Now, let's perform micro-evaluations to see if the dom0 kernel change affects the virtualization system.
 
 ### VM creation time 
 
@@ -76,7 +17,7 @@ Tip : You can the *time* command or *systemd-analyze* command
 ```
 
 - Repeat the same operation 5 times to get the average, 95th, and 95th percentiles.
-- Repeat the experiment with the default kernel and plot a graph to compare both results 
+- Vary the number of allocated vCPUs and memory, and repeat the same process. 
 
 - **What are your observations ?**
 
@@ -85,16 +26,16 @@ Tip : You can the *time* command or *systemd-analyze* command
 - Create and launch a simple VM with 2GB.
 - Delete the VM and record the completion time.
 - Repeat the operation while giving a different memory size to the VM, 4, 6, and 8GB (if possible).
-- Repeat the experiment with the default kernel and plot a graph to compare both results
 - **Comment your results.**
 
 ```
-Remember to repeat each operation 5 times to get the average, 95th, and 95th percentiles.
+Remember to repeat each operation 5 times to obtain the average, 95th percentile, and 95th percentile.
 ```
 
 ### VM migration time 
 
-To perform this part, you need to collaborate with a neighbour, basically you will *live migrate* your VM to your neighbour and vice-versa.
+To perform this part, you need to collaborate with a neighbour; basically, you will *live migrate* your VM to your neighbour and vice-versa.
+In your VM, launch a bash program that prints the date and time on a single line (in append mode) every 10ms. It will help determine the downtime of the live migration process. 
 
 **Setting network storage**
 
@@ -130,7 +71,6 @@ sudo mount -t nfs <IP address of initial>:/home/user/vms /home/user/vms
 
 - Migrate a VM of 2GB to your neighbour and get the migration time.
 - Reapeat for different memory sizes of the VM. 
-- Repeat the operation with a different dom0 kernel and compare. 
 
 ```
 Remember to repeat each operation 5 times to get the average, 95th, and 95th percentiles.
