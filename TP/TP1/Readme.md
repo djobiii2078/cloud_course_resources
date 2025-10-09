@@ -47,7 +47,8 @@ libaio-dev markdown pandoc libc6-dev-i386`
 
 7. Check the `/boot` folder. 
 
-8. Reboot the machine and boot with the `Xen hypervisor` 
+8. Reboot the machine and boot with the `Xen hypervisor`.
+To achieve that, get the entry number of the Xen hypervisor in the `/boot/grub/grub.cfg` file and update the `GRUB_DEFAULT` value of the `/etc/default/grub` file accordingly. Then redo an update-grub. 
 
 
 ## Too hard ? Check the prebuilt version 
