@@ -128,7 +128,7 @@ iface br0 inet dhcp
 
 ## Little customization 
 
-Update Xen's source code to tweak Xen initialization message ( `/etc/init.d/xencommons start` ) 
+Update Xen's source code to tweak Xen initialization message ( `xl create -c <vm.cfg>` ) 
 to add a custom message with your name, e.g.:
 
 ```
