@@ -158,7 +158,7 @@ sudo snap install wrk2
 Now run : 
 
 ```
-wrk -t2 -c50 -d10s -R2000 --latency http://127.0.0.1:3000/ | awk '
+wrk2 -t2 -c50 -d10s -R2000 --latency http://<IP_VM>:80/ | awk '
 /^[[:space:]]*[0-9]+\.[0-9]+%/ {
   gsub("ms","",$2)
   bars=int(log($2+1)*10)
