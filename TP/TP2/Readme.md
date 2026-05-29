@@ -57,7 +57,7 @@ Restart nfs to update its settings for our new shared folder : `sudo /etc/init.d
 To achieve that, update the `/etc/ssh/sshd_config` file and put `yes` to the `PermitRootLogin` option.
 - Reload the `ssh` service : `sudo service ssh reload` 
 
-** Migration of the VM** 
+**Migration of the VM** 
 - On the target host, let's mount the shared folder under the same tree (Update based on your settings)
 
 ```
