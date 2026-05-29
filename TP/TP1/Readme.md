@@ -19,7 +19,8 @@ Before launching, get the list of supported operating systems and kernels in the
 1. Download Xen 4.15 from the official website. You can just run `wget https://downloads.xenproject.org/release/xen/4.15.0/xen-4.15.0.tar.gz`.
 2. Unzip the archive. You can run `tar xvzf xen-4.15.0.tar.gz`
 3. Install the dependencies required by Xen 
-`sudo apt update
+```
+sudo apt update
 sudo apt install build-essential bcc bin86 gawk bridge-utils
 iproute libcurl3 libcurl4-openssl-dev bzip2 module-init-tools
 transfig tgif texinfo texlive-latex-base texlive-latex-recommended
@@ -28,7 +29,8 @@ make gcc libc6-dev zlib1g-dev python python-dev python-twisted
 libncurses5-dev patch libvncserver-dev libsdl-dev libjpeg62-dev
 iasl libbz2-dev e2fslibs-dev git-core uuid-dev ocaml ocaml-findlib
 libx11-dev bison flex xz-utils libyajl-dev gettext libpixman-1-dev
-libaio-dev markdown pandoc libc6-dev-i386`
+libaio-dev markdown pandoc libc6-dev-i386
+```
 
 **Some libraries may not be supported anymore. Adjust by removing the faulty libraries from the list.**
 
