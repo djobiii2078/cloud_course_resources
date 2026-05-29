@@ -67,14 +67,20 @@ sudo mount -t nfs <IP address of initial>:/home/user/vms /home/user/vms
 - Check if the folder is correctly mapped.
 - On the initial host (where the VM is running), trigger the migration : `sudo xl migrate vmname <IP address of neighbour>`
 
-**Metrics comparaison**
+**Migration with live application (nginx)**
 
-- Migrate a VM of 2GB to your neighbour and get the migration time.
-- Reapeat for different memory sizes of the VM. 
+- Migrate a VM of running an nginx server and monitor the downtime with this utility script
+```
+while true; do
+  LAT=$(curl -o /dev/null -s -w "%{time_total}" http://<IP_VM>:3000)
+  MS=$(printf "%.0f" "$(echo "$LAT * 1000" | bc -l)")
+  printf "%4sms " "$MS"
+  for i in $(seq 1 $((MS / 2))); do printf "█"; done
+  printf "\n"
+  sleep 1
+done
+```
 
-```
-Remember to repeat each operation 5 times to get the average, 95th, and 95th percentiles.
-```
 
 
 
