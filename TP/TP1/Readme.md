@@ -137,4 +137,39 @@ to add a custom message with your name, e.g.:
 #.      .CUSTOMIZED BY.    #
 #.        DJOBIII2078.     #
 ############################
+
 ```
+
+## Benchmarking
+
+Deploy a nginx server inside your VM and benchmark it from your host. 
+Concretely, inside your VM, run `sudo apt install nginx` to get your nginx server running. Test by doing `curl -X GET http://<IP_VM>:80`, you should get the landing screen of nginx. 
+
+Then on your host deploy `wrk2` by following the steps below: 
+
+```
+sudo apt update
+sudo apt install snapd
+sudo snap install wrk2
+```
+
+Now run : 
+
+```
+wrk -t2 -c50 -d10s -R2000 --latency http://127.0.0.1:3000/ | awk '
+/^[[:space:]]*[0-9]+\.[0-9]+%/ {
+  gsub("ms","",$2)
+  bars=int(log($2+1)*10)
+
+  printf "%8s | ", $1
+
+  for(i=0;i<bars;i++)
+    printf "█"
+
+  printf " %.2fms\n", $2
+}'
+```
+
+Do the same by benchmarking an nginx server on the host directly and compare. We'll do the same for containers. 
+
+
